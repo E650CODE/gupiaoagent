@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+
+# 环境
+.env
+.env.local
+
+# 数据
+backend/data/*.db
+backend/data/*.json
+backend/logs/
+
+# 前端
+node_modules/
+dist/
+.vite/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# 项目内临时
+新建文本文档.txt

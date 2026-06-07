@@ -1,0 +1,41 @@
+# ===== Web 框架 =====
+fastapi==0.110.3
+uvicorn[standard]==0.29.0
+
+# ===== 配置与校验 =====
+python-dotenv==1.0.1
+pydantic==2.7.1
+pydantic-settings==2.2.1
+
+# ===== 数据获取 =====
+akshare>=1.13.0
+mootdx>=0.11.0
+
+# ===== 数据处理 =====
+pandas>=2.1
+numpy>=1.26,<2          # akshare/talib 与 numpy 1.x 兼容性更好
+
+# ===== 技术指标 =====
+# TA-Lib Windows 需先安装 wheel：
+# pip install https://github.com/cgohlke/talib-build/releases/download/v0.4.28/TA_Lib-0.4.28-cp311-cp311-win_amd64.whl
+TA-Lib==0.4.28
+
+# ===== HTTP =====
+requests>=2.31
+httpx>=0.25,<0.26          # 受 mootdx 0.11.x 约束
+
+# ===== 日志 / 重试 =====
+loguru>=0.7
+tenacity>=8.2
+
+# ===== 缓存与存储 =====
+redis>=5.0
+cachetools>=5.3          # Redis 不可用时进程内 TTL 缓存降级
+# SQLite 为 Python 内置，无需依赖
+
+# ===== 加密 =====
+cryptography>=42.0
+
+# ===== 测试 =====
+pytest>=8.0
+pytest-asyncio>=0.23
